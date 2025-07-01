@@ -145,9 +145,9 @@ document.getElementById('whatsapp-form').addEventListener('submit', function(e) 
 
     let pesan = "";
     if (hadir === "Hadir") {
-        pesan = `Assalamualaikum Intan & Ikhwan👰🤵\n\nSaya, ${nama}, insyaAllah akan hadir di acara pernikahan kalian💖💍.\n\nUcapan:\n${ucapan}`;
+        pesan = `Assalamualaikum Intan & Ikhwan👋\n\nSaya, ${nama}, insyaAllah akan hadir di acara pernikahan kalian💖💍.\n\nUcapan:\n${ucapan}`;
     } else if (hadir === "Tidak hadir") {
-        pesan = `Assalamualaikum Intan & Ikhwan👰🤵\n\nSaya, ${nama}, mohon maaf tidak bisa hadir di acara pernikahan kalian 🙏.\n\nUcapan:\n${ucapan}`;
+        pesan = `Assalamualaikum Intan & Ikhwan👋\n\nSaya, ${nama}, mohon maaf tidak bisa hadir di acara pernikahan kalian 🙏.\n\nUcapan:\n${ucapan}`;
     }
 
     const nomor = '6282361153298';
