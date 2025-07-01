@@ -139,15 +139,21 @@ document.addEventListener("DOMContentLoaded", function() {
 document.getElementById('whatsapp-form').addEventListener('submit', function(e) {
     e.preventDefault(); // Mencegah reload halaman
 
-    const nama = document.getElementById('nama').value.trim();
-    const hadir = document.getElementById('hadir').value;
-    const ucapan = document.getElementById('ucapan').value.trim();
+    const nama = document.getElementById("nama").value;
+    const hadir = document.getElementById("hadir").value;
+    const ucapan = document.getElementById("ucapan").value;
 
-    const pesan = `Halo Intan & Ikhwan!👋 Saya ${nama}, ${hadir} ke acara kalian💖🕊️.\n\n${ucapan}`;
-    const nomor = '6282361153298'; // ganti 0 dengan 62
+    let pesan = "";
+    if (hadir === "Hadir") {
+        pesan = `Assalamualaikum Intan & Ikhwan👰🤵\n\nSaya, ${nama}, insyaAllah akan hadir di acara pernikahan kalian💖💍.\n\nUcapan:\n${ucapan}`;
+    } else if (hadir === "Tidak hadir") {
+        pesan = `Assalamualaikum Intan & Ikhwan👰🤵\n\nSaya, ${nama}, mohon maaf tidak bisa hadir di acara pernikahan kalian 🙏.\n\nUcapan:\n${ucapan}`;
+    }
+
+    const nomor = '6282361153298';
     const url = `https://wa.me/${nomor}?text=${encodeURIComponent(pesan)}`;
+    window.open(url, "_blank");
 
-    window.open(url, '_blank');
 });
 
 
